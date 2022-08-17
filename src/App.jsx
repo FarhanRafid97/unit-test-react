@@ -1,6 +1,7 @@
 import { Link, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Counter from './pages/Counter';
+import Fetch from './pages/Fetch';
 import Form from './pages/Form';
 function App() {
   return (
@@ -9,11 +10,15 @@ function App() {
         <Link to="/" className="mr-4">
           counter
         </Link>
-        <Link to="/form">Form</Link>
+        <Link to="/form" className="mr-4">
+          Form
+        </Link>
+        <Link to="/fetch">Fetch</Link>
       </div>
       <Routes>
         <Route path="/" element={<Counter number={0} />} />
         <Route path="/form" element={<Form />} />
+        <Route path="/fetch" element={<Fetch />} />
       </Routes>
     </div>
   );
