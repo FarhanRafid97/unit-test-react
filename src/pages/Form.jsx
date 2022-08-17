@@ -1,7 +1,6 @@
-import { useState } from 'react';
-import './App.css';
+import React, { useState } from 'react';
 
-function App() {
+const Form = () => {
   const [input, setInput] = useState({
     email: '',
     password: '',
@@ -25,7 +24,8 @@ function App() {
     setInput({ ...input, [e.target.name]: e.target.value });
   };
   return (
-    <div className="container m-auto">
+    <div>
+      {' '}
       <form onSubmit={onSubmit}>
         <div>
           <label htmlFor="email" className="form-label">
@@ -69,12 +69,12 @@ function App() {
           />
         </div>
         {error && <p>{error}</p>}
-        <button type="submit" className="btn">
+        <button type="submit" className="btn ">
           submit
         </button>
       </form>
     </div>
   );
-}
+};
 
-export default App;
+export default Form;
